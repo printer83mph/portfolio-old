@@ -1,0 +1,29 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #FAFAFA;
+}
+
+#topbar {
+	text-align: center;
+	padding-top: 5pt;
+	padding-bottom: 5pt;
+	background-color: #D32F2F;
+	color: rgba(255,255,255,.70);
+}
+
+body > header {
+	text-align: center;
+	padding-bottom: 5pt;
+	background-color: #F44336;
+	color: rgba(255,255,255,1);
+}
+
+body > article {
+	background-color: #FFFFFF;
+	padding:5pt;
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10pt;
+	box-shadow: 0 0 5pt;
+}
