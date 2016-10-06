@@ -72,3 +72,15 @@ body > footer {
 body > footer:hover {
 	color: rgba(255,255,255,1);
 }
+
+#secret {
+	color:#fafafa;
+	padding:5pt;
+	margin-top:10pt;
+	margin-bottom:10pt;
+	text-align:center;
+}
+
+#secret:hover {
+	background-color:#ccc;
+}
