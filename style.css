@@ -1,6 +1,6 @@
 body {
 	font-family: 'Roboto', sans-serif;
-	background-color: #FFEBEE;
+	background-color:#FFEBEE;
 }
 
 #topbar {
@@ -74,7 +74,7 @@ body > footer:hover {
 }
 
 #secret {
-	color:#fafafa;
+	color:#FFEBEE;
 	padding:5pt;
 	margin-top:10pt;
 	margin-bottom:10pt;
