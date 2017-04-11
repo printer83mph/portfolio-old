@@ -1,3 +1,9 @@
+@media screen and (min-width: 1000px) {
+	ul {
+		display: flex;
+	}
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	background-color:#FFEBEE;
@@ -34,7 +40,9 @@ ul {
 }
 
 li {
-	float: left;
+	margin: 5pt;
+	padding: 10pt;
+	background-color: #FFFFFF;
 }
 
 li a {
@@ -50,17 +58,12 @@ li a:hover {
 }
 
 body > article {
-	background-color: #FFFFFF;
 	padding: 20pt 40pt 20pt 40pt;
 	width:70%;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:10pt;
-	box-shadow: 0 0 5pt;
+	margin: auto;
 }
 
 body > footer {
-	margin-top:10pt;
 	padding-top:10pt;
 	padding-bottom:10pt;
 	background-color: #D32F2F;
