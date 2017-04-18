@@ -1,12 +1,7 @@
-@media screen and (min-width: 1000px) {
-	ul {
-		display: flex;
-	}
-}
-
 body {
 	font-family: 'Roboto', sans-serif;
 	background-color:#FFEBEE;
+	width: 100%;
 }
 
 #topbar {
@@ -34,6 +29,8 @@ h1, h2 {
 
 ul {
 	list-style-type: none;
+	display: flex;
+	flex-direction: column;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -58,14 +55,14 @@ li a:hover {
 }
 
 body > article {
-	padding: 20pt 40pt 20pt 40pt;
-	width:70%;
+	padding: 20pt 0;
+	width:90%;
+	max-width: 1000px;
 	margin: auto;
 }
 
 body > footer {
-	padding-top:10pt;
-	padding-bottom:10pt;
+	padding:10pt 0;
 	background-color: #D32F2F;
 	width:100%;
 	color: rgba(255,255,255,.70);
@@ -86,4 +83,10 @@ body > footer:hover {
 
 #secret:hover {
 	background-color:#ccc;
+}
+
+@media screen and (min-width: 1000px) {
+	ul {
+		flex-direction: row;
+	}
 }
