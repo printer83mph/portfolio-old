@@ -12,6 +12,7 @@
     "@react-three/fiber": "^7.0.6",
     "@snowpack/plugin-postcss": "^1.4.3",
     "autoprefixer": "^10.3.6",
+    "framer-motion": "^4.1.17",
     "postcss": "^8.3.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

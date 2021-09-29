@@ -1,6 +1,6 @@
 import React from 'react'
-import Background from './components/Background'
-import TypeOut from './components/TypeOut'
+import PageIndex from '../components/PageIndex'
+import Background from '../components/Background'
 
 const Home = () => (
   <>
@@ -8,17 +8,19 @@ const Home = () => (
       <Background />
     </div>
     <div className="h-screen" />
-    <div className="container mx-auto relative">
-      <div className="min-h-screen">
+    <div className="container mx-auto relative min-h-screen">
+      <div>
         <h1 className="font-serif font-black text-4x tracking-tight">
-          <TypeOut>
-            You finally made it!
-          </TypeOut>
+          You finally made it!
         </h1>
-        <p className="font-sans font-normal text-2x text-gray-500 tracking-wide">
+        <p className="font-sans font-normal text-2x text-gray-400 tracking-wide">
           Keep scrolling to enter a world of wonder !!
         </p>
       </div>
+      <div>
+        Other stuff...
+      </div>
+      <PageIndex />
     </div>
   </>
 )
