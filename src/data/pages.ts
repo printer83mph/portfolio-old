@@ -1,8 +1,27 @@
 const pages: Page[] = [
   {
     name: 'Test Page',
-    description: 'Welcome to my awesome test page. I love big boner!',
+    description: 'Welcome to my awesome test page. Groner!',
     id: 'example',
+    color: '#10d010',
+  },
+  {
+    name: 'Second Page',
+    description: 'Just a layout test. Don\'t mind me.',
+    id: 'example1',
+    color: '#d01010',
+  },
+  {
+    name: 'Awesome Third Page',
+    description: 'Groner roner... Groner roner',
+    id: 'example2',
+    color: '#1010d0',
+  },
+  {
+    name: 'Sick Thing',
+    description: 'You will be Mind Blown from this one.. honestly!!!',
+    id: 'example3',
+    color: '#108080',
   },
 ]
 

@@ -1,17 +1,15 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { AnimateSharedLayout } from 'framer-motion'
 
 import Home from './pages/Home'
-import Page from './pages'
+import Page from './pages/Page'
 
 const App = () => (
   <Router>
-    <AnimateSharedLayout>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/:page" component={Page} />
-      </Switch>
+    <AnimateSharedLayout type="crossfade">
+      <Home />
+      <Route path="/:page" exact component={Page} />
     </AnimateSharedLayout>
   </Router>
 )
