@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { RouteComponentProps, Redirect, Link } from 'react-router-dom'
+import { FiArrowLeft } from 'react-icons/fi'
 
 import { AnimatePresence, motion } from 'framer-motion'
 import usePageContents from '../hooks/usePageContents'
@@ -36,14 +37,18 @@ const Page = ({ match }: RouteComponentProps<MatchParams>) : JSX.Element => {
 
   return (
     <div
-      className="fixed top-0 w-screen h-screen backdrop-blur-xl"
+      className="fixed top-0 w-screen h-screen backdrop-blur-xl overflow-y-scroll"
       style={{ backgroundColor: 'rgba(255,255,255,.5)' }}
     >
       <div className="container mx-auto px-3 md:px-0">
         <Link to="/">
-          <div className="my-4 py-2 px-4 bg-white inline-block rounded-md shadow-sm">
-            Back
-          </div>
+          <motion.div
+            className="mb-4 mt-6 ml-3 inline-block text-2x font-semibold text-gray-400 hover:text-gray-700"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            <FiArrowLeft />
+          </motion.div>
         </Link>
         <motion.div
           layoutId={`pagebox-${id}`}
@@ -53,7 +58,7 @@ const Page = ({ match }: RouteComponentProps<MatchParams>) : JSX.Element => {
           <PageBoxContents page={page} />
         </motion.div>
 
-        <AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
           {/* TODO: implement tailwind/typography prose thing */}
           { loading
             ? null
@@ -63,9 +68,12 @@ const Page = ({ match }: RouteComponentProps<MatchParams>) : JSX.Element => {
                 layoutId="page-content"
                 initial={{ y: -30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
+                exit={{ opacity: 0 }}
                 transition={{ delay: 0.5 }}
               >
-                <ReactMarkdown>{contents}</ReactMarkdown>
+                <article className="prose max-w-none mb-[30vh]">
+                  <ReactMarkdown>{contents}</ReactMarkdown>
+                </article>
               </motion.div>
             )}
         </AnimatePresence>

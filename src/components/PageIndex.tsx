@@ -35,7 +35,10 @@ const PageIndex = ({ className, ...rest }: PageIndexProps) => (
                 className="flex-grow"
               >
                 {/* big block turns into header on clickthrough */}
-                <div className={`${pageBoxClassName}`} style={{ ...(pageBoxStyles(page)) }}>
+                <div
+                  className={`${pageBoxClassName}`}
+                  style={{ ...(pageBoxStyles(page)) }}
+                >
                   <PageBoxContents page={page} />
                 </div>
               </Link>

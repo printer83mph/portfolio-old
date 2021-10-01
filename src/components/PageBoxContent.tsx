@@ -6,7 +6,7 @@ interface PageBoxContentsProps {
 
 const PageBoxContents = ({ page }: PageBoxContentsProps) => {
   const {
-    name, description, id, color,
+    name, description, color,
   } = page
   return (
     <>
@@ -18,14 +18,14 @@ const PageBoxContents = ({ page }: PageBoxContentsProps) => {
         className="absolute w-full h-full"
         style={{ backgroundColor: 'black', opacity: 0.15 }}
       />
-      <div className="relative h-72 px-5 flex flex-col justify-center text-white">
+      <div className="relative h-52 lg:h-72 px-5 lg:px-12 flex flex-col justify-center text-white">
         <h2
-          className="font-bold text-2x tracking-tight leading-none mb-3"
+          className="font-bold text-2x lg:text-4x tracking-tight leading-none mb-3"
         >
           {name}
         </h2>
         <h4
-          className="tracking-wide opacity-70"
+          className="tracking-wide lg:text-2x opacity-70"
         >
           {description}
         </h4>
